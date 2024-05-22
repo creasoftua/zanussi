@@ -21,7 +21,7 @@ substitutions:
 # please do not change packeages order it is very important, just comment/uncomment
 packages:
   remote:
-    url: https://github.com/dentra/esphome-ewh
+    url: https://github.com/creasoftua/zanussi
     ref: master # cant use substitutions here
     files:
       ## Enable additional WiFi signal sensor. Comment next line to disable.

@@ -4,7 +4,7 @@ substitutions:
   # project_version: $project_branch
   project_version: 2024-master
   # project git source
-  project_source: github://dentra/esphome-ewh@$project_branch
+  project_source: github://creasoftua/zanussi@$project_branch
   # project source refresh interval
   project_source_refresh: 12h
   # project idenitfier

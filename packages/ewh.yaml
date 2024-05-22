@@ -1,6 +1,6 @@
 # This file enables main EWH services.
 external_components:
-  - source: github://dentra/esphome-ewh@$project_version
+  - source: github://creasoftua/zanussi@$project_version
 
 logger:
   # Make sure logging is not using the serial port
