@@ -64,3 +64,17 @@ climate:
   - platform: bwh
     id: whc
     name: None # use friendly_name
+
+i2c:
+  sda: 4
+  scl: 5
+
+sensor:
+  - platform: sht3xd
+    temperature:
+      name: "Bathroom Temperature"
+    humidity:
+      name: "Bathroom Humidity"
+    address: 0x44
+    update_interval: 60s
+    heater_enabled: false
