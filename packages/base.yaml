@@ -16,7 +16,6 @@ substitutions:
   # framework type settings: esp-idf or arduino
   framework_type: arduino
   # add suffix for node name to have one firmware for many devices.
-  node_add_mac_suffix: "false"
 
 esphome:
   name: $node_name
