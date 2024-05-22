@@ -21,7 +21,7 @@ substitutions:
 esphome:
   name: $node_name
   friendly_name: $friendly_name
-  name_add_mac_suffix: $node_add_mac_suffix
+  name_add_mac_suffix: false
   project:
     name: "dentra.$project_id"
     version: "$project_version ($framework_type)"
