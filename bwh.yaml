@@ -1,11 +1,11 @@
 substitutions:
   # main prefix for all entities
-  friendly_name: "Water Heater"
+  friendly_name: "Boiler"
   # name of your node
-  node_name: "water-heater"
+  node_name: "zanussi-artendo-pro"
   # use "esp32-s3-devkitc-1" for Lilygo T-Dongle S3, "esp12e" for iot-uni-dongle,
   # "esp8285" for coolrf-heatstick, or your own if you know it
-  board: "esp32-s3-devkitc-1"
+  board: "esp12e"
   # time platform: "sntp" or "homeassistant"
   time_platform: "sntp"
   # SSID of your wifi
@@ -15,8 +15,8 @@ substitutions:
   # password for fallback wifi hotspot
   wifi_ap_password: !secret wifi_ap_password
   # UART configuration. Somtimes may need to swap tx/rx.
-  tx_pin: GPIO19 # use TX for iot-uni-dongle or coolrf-heatstick
-  rx_pin: GPIO20 # use RX for iot-uni-dongle or coolrf-heatstick
+  tx_pin: GPIO3 # use TX for iot-uni-dongle or coolrf-heatstick
+  rx_pin: GPIO1 # use RX for iot-uni-dongle or coolrf-heatstick
 
 # please do not change packeages order it is very important, just comment/uncomment
 packages:
@@ -25,9 +25,9 @@ packages:
     ref: master # cant use substitutions here
     files:
       ## Enable additional WiFi signal sensor. Comment next line to disable.
-      - packages/wifi_signal.yaml
+      #- packages/wifi_signal.yaml
       ## Enable additional Uptime sensor. Comment next line to disable.
-      - packages/uptime.yaml
+      #- packages/uptime.yaml
       ## Uncomment next line to enable additional restart button.
       - packages/restart.yaml
       ## optional package, uncomment next line to enable experimental cloud support
@@ -35,7 +35,7 @@ packages:
       # Required package, do not comment
       - packages/base.yaml
       # Required package, replace with esp8266.yaml if you use ESP8266
-      - packages/esp32.yaml
+      - packages/esp8266.yaml
 
 # Enable Home Assistant API connection.
 api:
@@ -64,14 +64,3 @@ climate:
   - platform: bwh
     id: whc
     name: None # use friendly_name
-
-## Uncomment to enable cloud support
-# rka_cloud:
-#   id: cloud
-#   mac: !secret cloud_mac
-#   uid: !secret cloud_uid
-
-## Uncomment to enable web server
-# web_server:
-#   include_internal: true
-
